@@ -1,26 +1,16 @@
-const lines = [
-    "I write, erase, rewrite",
-    "Erase again, and then",
-    "A poppy blooms.",
-];
+import { useState, useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-function App() {
-    const poem = lines.map((line, index) => {
-	return (
-	    <div>
-	    <p> {line} </p>
-	    { index < lines.length - 1 && <hr /> }
-	    </div>
-	);
-    });
+// Import our components
+import MovieDisplay from "./components/MovieDisplay";
+import Form from "./components/Form";
 
-    return (
-        <>
-            <article>
-                {poem}
-            </article>
-        </>
-    );
+export default function App() {
+  return (
+    <div className="App">
+      <Form />
+      <MovieDisplay />
+    </div>
+  );
 }
-
-export default App;
