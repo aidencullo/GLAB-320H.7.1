@@ -23,7 +23,9 @@ export default function App() {
     }
     // This will run on the first render but not on subsquent renders
     useEffect(() => {
-	getMovie("Clueless");
+	const randomTitles = ['Inception', 'Matrix', 'Avatar', 'Titanic', 'Jaws', 'Terminator'];
+	const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)];
+	getMovie(randomTitle);
     }, []);
 
     return (
