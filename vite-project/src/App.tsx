@@ -29,7 +29,7 @@ export default function App() {
   return (
     <div className="App">
       <Form moviesearch={getMovie} />
-      {movie && <MovieDisplay movie={movie} />}
+      <MovieDisplay movie={movie} />
     </div>
   );
 }
